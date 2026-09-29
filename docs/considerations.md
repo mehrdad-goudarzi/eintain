@@ -5,3 +5,5 @@
             - based on which criteria the request has to be repeated.
             - how many times we should repeat the request eventually.
             - the delay between each try
+- no error/exception handling
+    - the exception handling can vary in each layer and be handled based on the layer's nature.
