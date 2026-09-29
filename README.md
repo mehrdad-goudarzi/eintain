@@ -9,7 +9,7 @@ Built-in object of .net called [ActionBlock](https://learn.microsoft.com/en-us/d
 
 
 #### IO-Bound
-The task is IO-Bound and threads will be hanging most of the time until the network IO is finished, therefore the level of parallelism can be configured reletively high.
+The task is IO-Bound and threads will be hanging most of the time until the network IO is finished, therefore the level of parallelism can be configured relatively high.
 
 
 [Considerations](docs/considerations.md)
