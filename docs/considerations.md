@@ -1,1 +1,7 @@
 - no user-interface is considered
+- no infrastructure has been considered
+    -  network calls to really download a page can bring following considerations which needs to be taken care of:
+        - retry policy like:
+            - based on which criteria the request has to be repeated.
+            - how many times we should repeat the request eventually.
+            - the delay between each try
