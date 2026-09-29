@@ -17,13 +17,20 @@ public class DownloadAgent
         _block = new ActionBlock<DownloadableItem>(ProcessItem,
             new ExecutionDataflowBlockOptions
             {
-                MaxDegreeOfParallelism = configs.Value.ParallelismLevel, BoundedCapacity = configs.Value.TotalCapacity
+                MaxDegreeOfParallelism = configs.Value.ParallelismLevel,
+                BoundedCapacity = configs.Value.TotalCapacity
             });
     }
 
     public Task AppendToQueue(DownloadableItem item)
     {
         return _block.SendAsync(item);
+    }
+
+    public Task WaitUntilCompletion()
+    {
+        _block.Complete();
+        return _block.Completion;
     }
 
     private async Task ProcessItem(DownloadableItem item)

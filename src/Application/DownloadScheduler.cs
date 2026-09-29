@@ -16,4 +16,9 @@ public class DownloadScheduler(IQueryHandler<GetNotFinalizedItemsQuery, IEnumera
             await downloadAgent.AppendToQueue(item);
         }
     }
+
+    public Task WaitUntilCompletion()
+    {
+        return downloadAgent.WaitUntilCompletion();
+    }
 }

@@ -25,6 +25,7 @@ public class DownloadScheduler
 
         //Act
         await schedule.Execute();
+        await schedule.WaitUntilCompletion();
 
         //Assert
         handler.Verify(x=>x.Handle(It.IsAny<Commands.FinishDownloadCommand>()), Times.Once);
