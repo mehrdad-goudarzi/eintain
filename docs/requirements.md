@@ -1,0 +1,2 @@
+- no user-interface is considered
+- retry the failures
