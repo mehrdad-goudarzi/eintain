@@ -1,4 +1,4 @@
-# following matters are represented
+# Following matters are represented
 
 - Test coverage
 - Fine grained structuring/layering
